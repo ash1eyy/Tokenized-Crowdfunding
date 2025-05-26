@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding DApp</title>
+
+    <link rel = "stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Crowdfunding Campaign</h1>
+    
+    <div id="wallet-section" class="card">
+        <button id="connectWallet">Connect Wallet</button>
+        <p id="walletStatus">Not connected</p>
+        <p id="ownerStatus"></p>
+    </div>
+    
+    <div id="campaign-info" class="card">
+        <h2>Campaign Details</h2>
+        <p>Goal: <span id="goal">-</span> ETH</p>
+        <p>Raised: <span id="raised">-</span> ETH</p>
+        <p>Contributors: <span id="contributors">-</span></p>
+        <p>Deadline: <span id="deadline">-</span></p>
+        <p>Status: <span id="status">-</span></p>
+        <p>Time left: <span id="timeLeft">-</span></p>
+    </div>
+    
+    <div id="contribute-section" class="card">
+        <h2>Contribute</h2>
+        <input type="number" id="contributionAmount" placeholder="Amount in ETH" step="0.01" min="0.01">
+        <button id="contributeBtn">Contribute</button>
+        <p>Your contribution: <span id="yourContribution">0</span> ETH</p>
+    </div>
+    
+    <div id="refund-section" class="card">
+        <h2>Refund</h2>
+        <button id="refundBtn" disabled>Request Refund</button>
+        <p id="refundStatus"></p>
+    </div>
+    
+    <div id="owner-actions" class="owner-actions" style="display: none;">
+        <h2>Owner Actions</h2>
+        <button id="withdrawBtn" disabled>Withdraw Funds</button>
+        <p id="withdrawStatus"></p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
